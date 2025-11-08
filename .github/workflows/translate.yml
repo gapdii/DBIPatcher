@@ -25,8 +25,8 @@ jobs:
         run: |
           LANG_VAL="$(awk -F= '/^[[:space:]]*target_lang[[:space:]]*=/{gsub(/^[ \t]+|[ \t]+$/,"",$2);print $2}' "$CONFIG_FILE" 2>/dev/null | tr -d '\r')"
           VER_VAL="$(awk -F= '/^[[:space:]]*ver[[:space:]]*=/{gsub(/^[ \t]+|[ \t]+$/,"",$2);print $2}' "$CONFIG_FILE" 2>/dev/null | tr -d '\r')"
-          [ -z "$LANG_VAL" ] && LANG_VAL="en"
-          [ -z "$VER_VAL" ] && VER_VAL="810"
+          [ -z "$LANG_VAL" ] && LANG_VAL="kr"
+          [ -z "$VER_VAL" ] && VER_VAL="831"
           echo "DBI_TARGET=$LANG_VAL"   >> "$GITHUB_ENV"
           echo "DBI_VER=$VER_VAL"       >> "$GITHUB_ENV"
 
