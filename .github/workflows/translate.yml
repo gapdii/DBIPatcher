@@ -31,7 +31,7 @@ jobs:
           echo "DBI_VER=$VER_VAL"       >> "$GITHUB_ENV"
 
       - name: Build & Patch
-        run: LANG="${DBI_TARGET}" make translate
+        run: LANG="${DBI_TARGET}" make translate-831
 
       - name: Patch version
         run: |
